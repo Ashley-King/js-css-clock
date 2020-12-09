@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+:root{
+    --pink: #FC458B;
+    --bright-blue: #10ADEE;
+    --medium-blue: #007cba;
+    --yellow: #f7c100;
+    --blue: #00a5de;
+    --dark-bg: #333;
+    --text: #222;
+    --light-bg: #fafafa;
+    --salmon: #ff7979;
+    --french-sky-blue: #84AFE6;
+    --aero: #79beee;
+    --turquoise: rgb(65, 234, 212);
+    --aero-blue: rgb(184, 242, 230);
+    --queen-blue: rgb(65, 101, 138);
+    --dark-slate-blue: rgb(65, 64, 115);
+    --burnt-sienna: rgb(222, 110, 75);
+    --blue-munsell: rgb(53, 135, 164);
+    --dark-cyan: rgb(45, 137, 139);
+    --steel-blue: rgb(53, 129, 184);
+    --mac-and-cheese: rgb(252, 176, 126);
+    --left-bg: rgba(53, 129,184, .8);
+    --right-bg: rgba(252, 176, 126, .8);
+    --hover-width: 75%;
+    --unhover-width: 25%;
+}
+*{
+    box-sizing: border-box;
+}
+
+html{
+    
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    position: relative;
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex:1;
+    align-items: center;
+    min-height: 100vh; 
+    overflow: hidden;
+}
+
+.bg-image{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/jellyfish.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(5px);
+    transform: scale(1.1);
+    
+
+}
+
+.clock{
+    width: 30rem;
+    height: 30rem;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px #EFEFEF,
+    inset 0 0 10px black,
+    0 0 10px rgba(0,0,0,0.2);
+}
+
+.clock-face{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+
+.hand{
+    width: 50%;
+    height: 6px;
+    background-color: var(--yellow);
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s cubic-bezier(0.1, 2.7, 0.58, 1);
+}
